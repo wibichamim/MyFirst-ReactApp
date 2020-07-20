@@ -1,3 +1,10 @@
+## About Project
+
+this project contains the implementation code from the Udemy course "React - The Complete Guide (incl Hooks, React Router, Redux)".<br/>
+Course Link : https://www.udemy.com/course/react-the-complete-guide-incl-redux/
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
