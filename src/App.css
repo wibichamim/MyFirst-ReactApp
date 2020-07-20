@@ -1,3 +1,26 @@
 .App {
   text-align: center;
 }
+
+.btn {
+  font: inherit;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn-switch {
+  background-color: blue;
+  color: white;
+}
+
+.btn-toogle {
+  background-color: slateblue;
+  color: white;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: rgb(5, 7, 134);
+  color: white;
+}
