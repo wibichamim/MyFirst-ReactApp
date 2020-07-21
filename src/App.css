@@ -3,8 +3,10 @@
 }
 
 .btn {
-  font: inherit;
   border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font: inherit;
   padding: 10px;
   cursor: pointer;
 }
@@ -20,7 +22,20 @@
   margin-left: 10px;
 }
 
-button:hover {
+.btn-switch:hover {
   background-color: rgb(5, 7, 134);
   color: white;
+}
+
+.btn-toogle:hover {
+  background-color: rgb(110, 43, 199);
+  color: white;
+}
+
+.red {
+  color: red;
+}
+
+.bold {
+  color: blueviolet;
 }

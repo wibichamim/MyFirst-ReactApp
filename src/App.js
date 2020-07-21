@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import "./App.css";
+// import styled from "styled-components";
 import Person from "./Person/Person";
+
+// const StyledButton = styled.button`
+//   border-radius: 8px;
+//   cursor: pointer;
+//   background-color: ${(props) => (props.alt ? "red" : "green")};
+//   color: white;
+//   font: inherit;
+//   padding: 10px;
+//   cursor: pointer;
+//   margin-left: 10px;
+//   &:hover {
+//     background-color: ${(props) => (props.alt ? "salmon" : "lightgreen")};
+//   }
+// `;
 
 const App = (props) => {
   const [personsState, setPersonsState] = useState({
     persons: [
       { id: "1", name: "Wibi", age: 22 },
-      { id: "2", name: "Jaka", age: 23 },
+      { id: "2", name: "Weeboo", age: 23 },
     ],
     showPersons: false,
   });
@@ -53,6 +68,25 @@ const App = (props) => {
     setPersonsState({ persons, showPersons: !doesShow });
   };
 
+  const classes = [];
+  if (personsState.persons.length <= 1) {
+    classes.push("red");
+  }
+  if (personsState.persons.length <= 0) {
+    classes.push("bold");
+  }
+
+  // const style = {
+  //   backgroundColor: "green",
+  //   color: "white",
+  //   font: "inherit",
+  //   padding: "10px",
+  //   cursor: "pointer",
+  //   ":hover": {
+  //     backgroundColor: "lightgreen",
+  //   },
+  // };
+
   let persons = null;
 
   if (personsState.showPersons) {
@@ -71,6 +105,9 @@ const App = (props) => {
         })}
       </div>
     );
+
+    // style.backgroundColor = "red";
+    // style[":hover"] = { backgroundColor: "salmon" };
   }
 
   if (!personsState.persons) {
@@ -79,7 +116,7 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <h1>My First React App</h1>
+      <h1 className={classes.join(" ")}>My First React App</h1>
       <button className="btn btn-switch" onClick={switchNameHandler}>
         Switch Name
       </button>
